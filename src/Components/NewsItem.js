@@ -1,6 +1,6 @@
 function NewsItem ({item}) {
-    const websiteUrl = item.url
-    const website = websiteUrl.split('https://').toUpperCase().split('/')[0]
+    const websiteurl = item.url
+    const website = websiteurl.split('https://').pop().split('/')[0]
 
     const date = item.publishedAt
     const formatDate = date.replace('T', '')
@@ -14,7 +14,7 @@ function NewsItem ({item}) {
             </div>
             <div className="article-content">
             <div className="article-source">
-                <image src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${website}&size=16`}  alt={item.source.id}/>
+                <img src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${website}&size=16`}  alt={item.source.id}/>
                  <span>{item.source.name}</span>
             </div>
             <div className="article-title">
