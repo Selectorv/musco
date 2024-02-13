@@ -6,7 +6,7 @@ import NewsGrid from './Components/NewsGrid'
 function App() {
 
   const [items, setItems] = useState([])
-  const [active, setActive] = useState (1)
+  const [active, setActive] = useState(1)
   const [category, setCategory] = useState ("general")
   
 
